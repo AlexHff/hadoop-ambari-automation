@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/alexhff/hadoop-ambari-automation">
-    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AHadoop_logo.svg&psig=AOvVaw3reqoXh7iKmQ6xPxNdUa95&ust=1608547814577000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDDqt2x3O0CFQAAAAAdAAAAABAD" alt="Logo" width="80" height="80">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Hadoop_logo_new.svg/2500px-Hadoop_logo_new.svg.png" alt="Logo" width="auto" height="80">
   </a>
 
   <h3 align="center">Hadoop via Ambari automation</h3>
@@ -75,6 +75,7 @@ To get a local copy up and running follow these simple steps.
 To continue with the project, you will need the following software installed on your machine :
 * [VirtualBox](https://www.virtualbox.org/)
 * [Vagrant](https://www.vagrantup.com/)
+* [Ansible](https://www.ansible.com/)
 
 ### Installation
 
@@ -107,8 +108,6 @@ Now you can start VMs with the following command:
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 ### Manually installing Ambari
 
@@ -165,7 +164,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 <!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
+## Contributors
 
 * [Alexander Hoffmann](https://github.com/alexhff)
 * [Adrien Bourget](https://github.com/adritoo)
