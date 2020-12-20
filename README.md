@@ -8,7 +8,7 @@
   <h3 align="center">Hadoop via Ambari automation</h3>
 
   <p align="center">
-    Hadoop (HDP) installation via Ambari on Vagrant VMs with Ansible/Chef/Puppet to configuration VMs and work on APIs.
+    Hadoop (HDP) installation via Ambari on Vagrant VMs with Ansible to configure VMs and work on APIs.
     <br />
     <a href="https://github.com/alexhff/hadoop-ambari-automation"><strong>Explore the docs »</strong></a>
     <br />
@@ -27,9 +27,6 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -41,7 +38,7 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#contributors">Contributors</a></li>
   </ol>
 </details>
 
@@ -50,18 +47,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`alexhff`, `hadoop-ambari-automation`, `twitter_handle`, `email`, `project_title`, `project_description`
-
-
-### Built With
-
-* []()
-* []()
-* []()
+This project aims at deploying a Hadoop cluster with 1 master node et 3 slaves using Vagrant to setup virtual machines and Ansible to configure the cluster and the different services. These Ansible playbooks will build a Hortonworks cluster (Hortonworks Data Platform and / or Hortonworks DataFlow) using Ambari Blueprints.
 
 
 
@@ -83,31 +69,54 @@ Clone the repo
 ```sh
 git clone https://github.com/alexhff/hadoop-ambari-automation.git
 ```
+
 Navigate to the repo
 ```sh
 cd hadoop-ambari-automation
 ```
+
 Copy the private key to your home directory (or some place convenient for you) so that it’s easily accessible for uploading via Ambari Web:
 ```sh
 vagrant
 ```
-The above command shows the command usage and also creates a private key as ~/.vagrant.d/insecure_private_key. This key will be used in the following steps.
 
-### Starting VMs
+The above command shows the command usage and also creates a private key as ~/.vagrant.d/insecure_private_key. This key will be used in the following steps.
 
 Copy the private key to the local repo:
 ```sh
 cp ~/.vagrant.d/insecure_private_key .
 ```
+
+### Start VMs
+
 Now you can start VMs with the following command:
 ```sh
-./bin/up.sh <number of VMs to launch>
+vagrant up
+```
+
+You can check the status of your VMs using:
+```sh
+vagrant status
+```
+All 4 machines should be running.
+
+### Launch Ansible installation
+
+To build the cluster using the Ansible playbooks, use the following command:
+```sh
+./bin/install_cluster.sh
 ```
 
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+
+### Adding nodes to the cluster
+
+If you want to add nodes, you have to edit two files.
+First, update the `Vagrantfile` to add more VMs.
+Second, edit the `inventory/static` file to update the Ansible configuration.
 
 ### Manually installing Ambari
 
@@ -163,7 +172,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 
-<!-- ACKNOWLEDGEMENTS -->
+<!-- CONTRIBUTORS -->
 ## Contributors
 
 * [Alexander Hoffmann](https://github.com/alexhff)

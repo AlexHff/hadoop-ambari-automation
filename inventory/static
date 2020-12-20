@@ -1,0 +1,15 @@
+######################################################
+##
+## The static inventory puts the hosts in different groups as described here: https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#hosts-and-groups
+## Variables would be defined directly for each host, including the ansible_user, the login user with sudoers permissions.
+## For authentication, either the password or the SSH Private Key can be used.
+##
+######################################################
+
+[hdp-master]
+master01 ansible_host=192.168.74.101 ansible_user=root ansible_ssh_private_key_file="~/.vagrant.d/insecure_private_key" rack=/default-rack
+
+[hdp-slave]
+slave01 ansible_host=192.168.74.102 ansible_user=root ansible_ssh_private_key_file="~/.vagrant.d/insecure_private_key" rack=/default-rack
+# slave02 ansible_host=192.168.74.103 ansible_user=root ansible_ssh_private_key_file="~/.vagrant.d/insecure_private_key" rack=/default-rack
+# slave03 ansible_host=192.168.74.104 ansible_user=root ansible_ssh_private_key_file="~/.vagrant.d/insecure_private_key" rack=/default-rack

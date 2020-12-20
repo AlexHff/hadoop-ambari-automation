@@ -23,43 +23,23 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, :path => "bin/bootstrap.sh"
 
   config.vm.define :c7401 do |c7401|
+    c7401.vm.hostname = "c7401.ambari.apache.org"
     c7401.vm.network :private_network, ip: "192.168.74.101"
   end
 
   config.vm.define :c7402 do |c7402|
+    c7402.vm.hostname = "c7402.ambari.apache.org"
     c7402.vm.network :private_network, ip: "192.168.74.102"
   end
 
-  config.vm.define :c7403 do |c7403|
-    c7403.vm.network :private_network, ip: "192.168.74.103"
-  end
+  # config.vm.define :c7403 do |c7403|
+  #   c7403.vm.hostname = "c7403.ambari.apache.org"
+  #   c7403.vm.network :private_network, ip: "192.168.74.103"
+  # end
 
-  config.vm.define :c7404 do |c7404|
-    c7404.vm.network :private_network, ip: "192.168.74.104"
-  end
-
-  config.vm.define :c7405 do |c7405|
-    c7405.vm.network :private_network, ip: "192.168.74.105"
-  end
-
-  config.vm.define :c7406 do |c7406|
-    c7406.vm.network :private_network, ip: "192.168.74.106"
-  end
-
-  config.vm.define :c7407 do |c7407|
-    c7407.vm.network :private_network, ip: "192.168.74.107"
-  end
-
-  config.vm.define :c7408 do |c7408|
-    c7408.vm.network :private_network, ip: "192.168.74.108"
-  end
-
-  config.vm.define :c7409 do |c7409|
-    c7409.vm.network :private_network, ip: "192.168.74.109"
-  end
-
-  config.vm.define :c7410 do |c7410|
-    c7410.vm.network :private_network, ip: "192.168.74.110"
-  end
+  # config.vm.define :c7404 do |c7404|
+  #   c7404.vm.hostname = "c7404.ambari.apache.org"
+  #   c7404.vm.network :private_network, ip: "192.168.74.104"
+  # end
 
 end
