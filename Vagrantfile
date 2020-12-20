@@ -9,20 +9,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "bento/centos-7.4"
 
-  # Fixes changes from https://github.com/mitchellh/vagrant/pull/4707
+  # Disable automatic box update checking. If you disable this, then
+  # boxes will only be checked for updates when the user runs
+  # agrant box outdated This is not recommended.
+  config.vm.box_check_update = false
+
   config.ssh.insert_key = false
 
-  # The url from where the 'config.vm.box' box will be fetched if it
-  # doesn't already exist on the user's system.
-
-  # CentOS 7.0 x86_64
-  #config.vm.box_url = "http://cloud.terry.im/vagrant/oraclelinux-7-x86_64.box"
-
   config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", 2048] # RAM allocated to each VM
+    vb.customize ["modifyvm", :id, "--memory", 1024]
   end
 
-  config.vm.provision :shell, :path => "scripts/bootstrap.sh"
+  config.vm.provision :shell, :path => "bin/bootstrap.sh"
 
   config.vm.define :c7401 do |c7401|
     c7401.vm.network :private_network, ip: "192.168.74.101"

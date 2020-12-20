@@ -101,7 +101,7 @@ cp ~/.vagrant.d/insecure_private_key .
 ```
 Now you can start VMs with the following command:
 ```sh
-./up.sh <number of VMs to launch>
+./bin/up.sh <number of VMs to launch>
 ```
 
 
