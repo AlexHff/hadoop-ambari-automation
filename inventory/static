@@ -6,10 +6,12 @@
 ##
 ######################################################
 
-[hdp-master]
-master01 ansible_host=192.168.74.101 ansible_user=root ansible_ssh_private_key_file="~/.vagrant.d/insecure_private_key" rack=/default-rack
+# [hdp-master]
+# master01 ansible_host=192.168.74.101 ansible_user=root ansible_ssh_private_key_file="~/.vagrant.d/insecure_private_key" rack=/default-rack
 
-[hdp-slave]
-slave01 ansible_host=192.168.74.102 ansible_user=root ansible_ssh_private_key_file="~/.vagrant.d/insecure_private_key" rack=/default-rack
-# slave02 ansible_host=192.168.74.103 ansible_user=root ansible_ssh_private_key_file="~/.vagrant.d/insecure_private_key" rack=/default-rack
-# slave03 ansible_host=192.168.74.104 ansible_user=root ansible_ssh_private_key_file="~/.vagrant.d/insecure_private_key" rack=/default-rack
+# [hdp-slave]
+# slave01 ansible_host=192.168.74.102 ansible_user=root ansible_ssh_private_key_file="~/.vagrant.d/insecure_private_key" rack=/default-rack
+#slave02 ansible_host=192.168.0.4 ansible_user=root ansible_ssh_pass=changeme
+
+[hdp-singlenode]
+node ansible_host=192.168.74.101 ansible_user=root ansible_ssh_private_key_file="~/.vagrant.d/insecure_private_key" rack=/default-rack

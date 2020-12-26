@@ -129,7 +129,7 @@
          (cluster_check_task.content|from_json).Requests.request_status == 'FAILED' or
          (cluster_check_task.content|from_json).Requests.request_status == 'TIMEDOUT' or
          (cluster_check_task.content|from_json).Requests.request_status == 'ABORTED')
-  retries: "{{ wait_timeout // 2 }}"
+  retries: "{{ wait_timeout // 10 }}"
   delay: 10
   when: wait and cluster_create_task is defined and cluster_create_task
 
