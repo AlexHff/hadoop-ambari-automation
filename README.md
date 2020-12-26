@@ -47,7 +47,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project aims at deploying a Hadoop cluster with 1 master node et 3 slaves using Vagrant to setup virtual machines and Ansible to configure the cluster and the different services. These Ansible playbooks will build a Hortonworks cluster (Hortonworks Data Platform and / or Hortonworks DataFlow) using Ambari Blueprints.
+This project aims at deploying a Hadoop single node cluster using Vagrant to setup virtual machines and Ansible to configure the cluster and the different services. These Ansible playbooks will build a Hortonworks cluster (Hortonworks Data Platform and / or Hortonworks DataFlow) using Ambari Blueprints.
+
+### Disclaimer
+
+We decided to implement a single node cluster because our computers could not handle more complex installations (we tried). Feel free to modify the inventory and the blueprint to modify the cluster.
 
 
 
@@ -89,22 +93,22 @@ cp ~/.vagrant.d/insecure_private_key .
 
 ### Start VMs
 
-Now you can start VMs with the following command:
+Now you can start VM with the following command:
 ```sh
 vagrant up
 ```
 
-You can check the status of your VMs using:
+You can check the status of your VM using:
 ```sh
 vagrant status
 ```
-All 4 machines should be running.
+The VM should be up and running.
 
 ### Launch Ansible installation
 
 To build the cluster using the Ansible playbooks, use the following command:
 ```sh
-./bin/install_cluster.sh
+./install_cluster.sh
 ```
 
 
