@@ -11,8 +11,7 @@ install:
   - pip3 install molecule==2.22
   # Use ansible 2.8 due to issue in 2.9.0 in the blueprint role task setting the 'cluster_template' fact
   # Related issue (most probably): https://github.com/ansible/ansible/issues/64169
-  - pip3 uninstall ansible
-  - pip3 uninstall ansible-base
+  - pip3 uninstall -y ansible ansible-base
   - rm -rf /usr/local/lib/python3.7/site-packages/ansible
   - pip3 install ansible==2.8.2
   - pip3 install docker
