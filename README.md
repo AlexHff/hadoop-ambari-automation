@@ -3,6 +3,10 @@
 <p align="center">
   <a href="https://github.com/alexhff/hadoop-ambari-automation">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Hadoop_logo_new.svg/2500px-Hadoop_logo_new.svg.png" alt="Logo" width="auto" height="80">
+    <br />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Apache_Ambari_Logo.svg/1280px-Apache_Ambari_Logo.svg.png" alt="Logo" width="auto" height="80">
+    <br />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Ansible_logo.svg/1200px-Ansible_logo.svg.png" alt="Logo" width="auto" height="80">
   </a>
 
   <h3 align="center">Hadoop via Ambari automation</h3>
